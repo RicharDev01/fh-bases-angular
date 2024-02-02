@@ -1,0 +1,31 @@
+<h3>Listado</h3>
+
+<ul class="list-group">
+  <li *ngFor="let personaje of listaPersonajes; 
+    let index = index;
+    let isFirst = first;
+    let isLast = last" 
+    class="list-group-item justify-content-between d-flex align-items-center" 
+    [ngClass]="{
+      'list-group-item-success': isFirst,
+      'list-group-item-danger': isLast,
+    }">
+
+    <div class="">
+      <span class="text-primary"> {{ index + 1 }}. </span>
+
+      <span>{{ personaje.nombre }} - </span>
+
+      <strong> Nivel de Poder: </strong>
+
+      <span>{{ personaje.poder }}</span>
+      
+      <!-- <strong> ID: </strong>
+
+      <span>{{ personaje.id }}</span> -->
+    </div>
+
+    <button class="btn btn-danger" (click)="onEliminarPersonaje( personaje.id )" >X</button>
+
+  </li>
+</ul>

@@ -1,0 +1,16 @@
+
+
+<div class="container" style="text-align: center;">
+  <h2 >En cuanto quieres incrementar el counter?</h2>
+  <input type="text" #valueCounter (keyup)="changeValueCounter(valueCounter.value)">  
+</div>
+
+<h3 style="text-align: center; font-size: 30;">Counter: {{ counter }} </h3>
+
+<div class="container" style="text-align: center;">
+
+  <button class="" (click)="decreseBy(valueCounter.value)">Decrease {{ valueCounter.value }} </button>
+  <button class="" (click)="reset()">Reset</button>
+  <button class="" (click)="increaseBy(valueCounter.value)">Increase {{ valueCounter.value }} </button>
+
+</div>

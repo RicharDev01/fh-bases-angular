@@ -1,0 +1,36 @@
+
+<style>
+  dd {
+    font-weight: bold;
+    font-size: 20px;
+  }
+</style>
+
+<h1> {{ nombreHeroe }} </h1>
+
+<hr>
+
+<dl>
+
+  <td>Nombre del Heroe</td>
+  <dd> {{ nombreHeroe }} </dd>
+  
+  <td>Edad del Heroe</td>
+  <dd> {{ edadHeroe }} </dd>
+  
+  <td>Metodo del Heroe</td>
+  <dd> {{ getDescripcion() }} </dd>
+  
+  <td>Capitalizar nombre del Heroe</td>
+  <dd> {{ capitalizarNombre }} </dd>
+
+</dl>
+
+<button 
+  *ngIf="nombreHeroe !== 'Ironman'"
+  (click)="cambiarNombre()" 
+  class="btn btn-primary mx-2" >Cambiar de Nombre</button>
+<button 
+  *ngIf="edadHeroe !== 40"
+  (click)="cambiarEdad()" 
+  class="btn btn-primary" >Cambiar de Edad</button>
